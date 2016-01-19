@@ -1,0 +1,124 @@
+body{
+  width: 400px;
+  position: absolute;
+  display: block;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 100px auto 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12pt;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+.title{
+  display: block;
+  border-bottom: 2px solid #333;
+  margin-bottom: 2px;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+
+#add, #show {
+  padding: 10px 0;
+}
+
+#search{
+  padding-bottom: 10px;
+}
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px 0 0;
+  cursor: pointer;
+}
+
+input {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+
+input#search_name{
+  float: left;
+  width: 310px;
+}
+
+input[name="book_name"] {
+  float: left;
+  width: 180px;
+  margin-right: 10px;
+}
+
+input[name="book_category"] {
+  width: 100px;
+}
+
+form {
+  padding-top: 20px
+}
+
+input::-webkit-input-placeholder {
+ font-family: 'Ubuntu', sans-serif;
+}
+
+.edit, .delete {
+    float: right;
+    margin-top: 0px;
+}
+
+li {
+  text-align: -webkit-match-parent;
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #5e5e5e;
+  clear: both;
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+#booklist input {
+  width: 150px;
+  display: none;
+}
+
+#progressbar {
+  display: block;
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 13px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar > div {
+   background-color: orange;
+   width: 40%; /* Adjust with JavaScript */
+   height: 20px;
+   border-radius: 10px;
+}
