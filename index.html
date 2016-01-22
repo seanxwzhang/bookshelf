@@ -12,7 +12,12 @@
       <div id="search">
         <label class="title">Search</label>
         <form id="search_form">
-          <input type="text" id="search_name">
+          <input type="text" name="book_name" placeholder="Book name">
+          <input type="text" name="book_category" list="categories" placeholder="Category">
+          <datalist id="categories">
+            <option value="CS">
+            <option value="ME">
+          </datalist>
           <button type="button">Search</button>
         </form>
       </div>
@@ -25,26 +30,32 @@
             <option value="CS">
             <option value="ME">
           </datalist>
-          <button type="button">Add</button>
+          <button type="button" id="add_button">Add</button>
         </form>
       </div>
       <div id="show">
         <label class="title">List</label>
         <ul id="booklist">
-          <li>
+          <li class="book_item">
             <label class="book_name">C++ Primer</label>
             <input type="text">
-            <button class="edit">Edit</button>
             <button class="delete">Delete</button>
+            <button class="edit">Edit</button>
             <div id="progressbar">
               <div></div>
             </div>
           </li>
-          <li class="edit_mode">
-            <label class="book_name">Computer Vision Foundations</label>
-            <input type="text">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
+          <li class="book_item">
+            <label class="book_name edit_mode">Computer Vision Foundations</label>
+            <input type="text" name="book_name" class="edit_mode" placeholder="Computer Vision Foundations">
+            <input type="text" name="book_category" list="categories" placeholder="Category" class="edit_mode">
+            <datalist id="categories">
+              <option value="CS">
+              <option value="ME">
+            </datalist>
+            <button class="delete edit_mode">Delete</button>
+            <button class="exit">Exit</button>
+            <button class="edit edit_mode">Edit</button>
             <div id="progressbar">
               <div></div>
             </div>
