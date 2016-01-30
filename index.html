@@ -36,17 +36,16 @@
       <div id="show">
         <label class="title">List</label>
         <ul id="booklist">
-          <li class="book_item" id="CPer">
+          <li class="book_item" category="Language" id=1>
             <label class="book_name">C++ Primer</label>
-            <input type="text">
             <button class="delete">Delete</button>
             <button class="edit">Edit</button>
-            <div id="progressbar">
+            <div class="progressbar">
               <div></div>
             </div>
           </li>
-          <li class="book_item">
-            <label class="book_name edit_mode" id="CVF">Computer Vision Foundations</label>
+          <li class="book_item" category="CV" id=2>
+            <label class="book_name edit_mode">Computer Vision Foundations</label>
             <input type="text" name="book_name" class="edit_mode" placeholder="Computer Vision Foundations">
             <input type="text" name="book_category" list="categories" placeholder="Category" class="edit_mode">
             <datalist id="categories">
@@ -56,7 +55,7 @@
             <button class="delete edit_mode">Delete</button>
             <button class="exit">Exit</button>
             <button class="edit edit_mode">Edit</button>
-            <div id="progressbar">
+            <div class="progressbar">
               <div></div>
             </div>
          </li>

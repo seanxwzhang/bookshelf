@@ -108,7 +108,7 @@ ul {
   display: none;
 }
 
-#progressbar {
+.progressbar {
   display: block;
   margin-top: 10px;
   background-color: black;
@@ -116,7 +116,7 @@ ul {
   padding: 3px;
 }
 
-#progressbar > div {
+.progressbar > div {
    background-color: orange;
    width: 40%; /* Adjust with JavaScript */
    height: 20px;
