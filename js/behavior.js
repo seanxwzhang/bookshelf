@@ -71,7 +71,8 @@ var editBook = function(book_item) {
   exit_button.innerHTML = "Exit";
   exit_button.setAttribute("class", "exit");
   book_item.insertBefore(exit_button, book_item.querySelector('button[class="edit edit_mode"]'));
-  bindBooks(book_item);
+  book_item.insertBefore(all_categories, book_item.querySelector('button[class="delet edit_mode"]'));
+  bindExit(book_item);
 }
 
 //Delete an existing book
@@ -114,15 +115,29 @@ var exitEdit = function(book_item) {
   book_item.querySelector("label").setAttribute("class", "book_name");
   book_item.querySelector('button[class="delete edit_mode"]').setAttribute("class", "delete");
   book_item.querySelector('button[class="edit edit_mode"]').setAttribute("class", "edit");
-  bindBooks(book_item);
 }
 
 //Bind books to event handler
 var bindBooks = function(book_item) {
   console.log("Binding book item");
+  bindEdit(book_item);
+  bindExit(book_item);
+  bindDelete(book_item);
+}
+
+var bindEdit = function(book_item) {
+  console.log("Binding edit button");
   var editButton = book_item.querySelector(".edit");
-  var deleteButton = book_item.querySelector(".delete");
-  // if this book is in edit mode
+  editButton.addEventListener("click", (function (x){
+    return function() {
+      editBook(book_item);
+    };
+  })(book_item));
+}
+
+var bindExit = function(book_item) {
+  console.log("Binding exit button");
+  var editButton = book_item.querySelector(".edit");
   if (editButton.getAttribute("class").indexOf("edit_mode") > 0) {
       var exitButton = book_item.querySelector(".exit");
       exitButton.addEventListener("click", (function (x) {
@@ -131,13 +146,11 @@ var bindBooks = function(book_item) {
         };
       })(book_item));
   }
-  else {
-    editButton.addEventListener("click", (function (x){
-      return function() {
-        editBook(book_item);
-      };
-    })(book_item));
-  }
+}
+
+var bindDelete = function(book_item) {
+  console.log("Binding delte button");
+  var deleteButton = book_item.querySelector(".delete");
   deleteButton.addEventListener("click", (function (x) {
     return function() {
       deleteBook(book_item);
